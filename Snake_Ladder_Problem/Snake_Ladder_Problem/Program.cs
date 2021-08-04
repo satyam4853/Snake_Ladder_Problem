@@ -13,20 +13,25 @@ namespace Snake_Ladder_Problem
             const int ladderoption = 1;
             const int snakeoption = 2;
             int positionone = 0;
+            int diceRollCount = 0;
             while (positionone < 100)
             {
                 Random random = new Random();
                 int dieRoll = random.Next(1, 7);
+                diceRollCount++;
                 int options = random.Next(0, 3);
+                Console.WriteLine("Position: " + positionone);
                 switch (options)
                 {
                     case noplayoption:
+                        Console.WriteLine("Position: " + positionone);
                         break;
                     case ladderoption:
                         if (positionone + dieRoll <= 100)
                         {
                             positionone = positionone + dieRoll;
                         }
+                        Console.WriteLine("Position: " + positionone);
                         break;
                     case snakeoption:
                         positionone = positionone - dieRoll;
@@ -34,10 +39,11 @@ namespace Snake_Ladder_Problem
                         {
                             positionone = 0;
                         }
+                        Console.WriteLine("Position: " + positionone);
                         break;
                 }
             }
-            Console.WriteLine("Player Wins With Position : " + positionone);
+            Console.WriteLine("Player Wins With Position : " + diceRollCount);
         }
     }
 }
