@@ -7,6 +7,8 @@ namespace Snake_Ladder_Problem
         static void Main(string[] args)
         {
             Console.WriteLine("This is snake and ladder problem");
+            int PlayerOne = 1;
+            int PlayerPosition = 0;
         }
     }
 }
