@@ -21,10 +21,12 @@ namespace Snake_Ladder_Problem
                 switch (options)
                 {
                     case noplayoption:
-                        positionone = positionone + 0;
                         break;
                     case ladderoption:
-                        positionone = positionone + dieRoll;
+                        if (positionone + dieRoll <= 100)
+                        {
+                            positionone = positionone + dieRoll;
+                        }
                         break;
                     case snakeoption:
                         positionone = positionone - dieRoll;
